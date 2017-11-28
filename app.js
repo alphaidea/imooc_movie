@@ -40,11 +40,10 @@ app.get('/', (req, res) => {
 // detail page
 app.get('/movie/:id', (req, res) => {
     const {id} = req.params;
-
     Movie.findById(id, (err, movie) => {
         res.render('detail', {
             movie,
-            title: movie.title
+            title: 'movie 详情页'
         })
     });
 });

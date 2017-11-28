@@ -23,15 +23,14 @@ const MovieSchema = new mongoose.Schema({
     }
 });
 
-MovieSchema.pre('save', (next) => {
-    const self = this;
+MovieSchema.pre('save', function(next) {
     const now = new Date();
-    if (self.isNew) {
-        self.meta.createAt = now;
-        self.meta.updateAt = now;
+    if (this.isNew) {
+        this.meta.createAt = now;
+        this.meta.updateAt = now;
     }
     else {
-        self.meta.updateAt = now;
+        this.meta.updateAt = now;
     }
     next();
 });

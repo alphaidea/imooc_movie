@@ -14,16 +14,16 @@ block content
                         th 更新
                         th 删除
                 tbody
-                    each item in movies
-                        tr(class="item-id-#{item._id}")
-                            td #{item.title}
-                            td #{item.doctor}
-                            td #{item.country}
-                            td #{item.year}
-                            td #{moment(item.meta.updateAt).format('MM/DD/YYYY')}
-                            td: a(target="_blank",href="../movie/#{item._id}") 查看
-                            td: a(target="_blank",href="../admin/update/#{item._id}") 修改
+                    each movie in movies
+                        tr(class='movie-id-#'+movie._id)
+                            td #{movie.title}
+                            td #{movie.doctor}
+                            td #{movie.country}
+                            td #{movie.year}
+                            td #{moment(movie.meta.updateAt).format('MM/DD/YYYY')}
+                            td: a(target='_blank', href='../movie/'+movie._id) 查看
+                            td: a(target='_blank', href='../admin/update/'+movie._id) 修改
                             td
-                                button.btn.btn-danger.del(type="button",data-id="#{item._id}") 删除
+                                button.btn.btn-danger.del(type='button', data-id=movie._id) 删除
 
-    script(src="/js/admin.js")
+    script(src='/js/admin.js')
