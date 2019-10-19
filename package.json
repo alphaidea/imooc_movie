@@ -7,7 +7,7 @@
     "body-parser": "^1.18.2",
     "express": "^4.16.2",
     "moment": "^2.19.2",
-    "mongoose": "^4.13.5",
+    "mongoose": "^5.4.10",
     "pug": "^2.0.0-rc.4",
     "underscore": "^1.8.3",
     "snyk": "^1.192.0"
