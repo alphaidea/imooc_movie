@@ -10,7 +10,7 @@
     "mongoose": "^4.13.5",
     "pug": "^2.0.0-rc.4",
     "underscore": "^1.8.3",
-    "snyk": "^1.192.0"
+    "snyk": "^1.316.1"
   },
   "devDependencies": {},
   "scripts": {
